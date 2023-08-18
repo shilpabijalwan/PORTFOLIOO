@@ -126,7 +126,7 @@ export default function Simple() {
           <Box
             py={10}
             display={{ md: "none" }}
-            border={"1px solid blue"}
+            // border={"1px solid blue"}
             h={"100vh"}
           >
             <Stack
