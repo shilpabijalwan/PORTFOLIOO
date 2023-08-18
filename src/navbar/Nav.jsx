@@ -105,6 +105,7 @@ export default function Simple() {
                     _hover={{ textDecoration: "none" }}
                     href={link.link}
                     key={link}
+                    // onClick={()=>onClose()}
                   >
                     <Text
                       color={"#C69DD2"}
@@ -123,10 +124,10 @@ export default function Simple() {
 
         {isOpen ? (
           <Box
-            pb={20}
+            py={10}
             display={{ md: "none" }}
-            // border={"1px solid blue"}
-            // h={"100vh"}
+            border={"1px solid blue"}
+            h={"100vh"}
           >
             <Stack
               as={"nav"}
@@ -139,6 +140,7 @@ export default function Simple() {
                   href={link.link}
                   key={link}
                   color={"pink.200"}
+                  onClick={onClose}
                 >
                   <Text
                     // color={"#C69DD2"}
@@ -149,10 +151,11 @@ export default function Simple() {
                   </Text>
                 </Link>
               ))}
+             
             </Stack>
           </Box>
         ) : null}
-        {/* <Resume /> */}
+       
       </Box>
     </>
   );

@@ -34,21 +34,21 @@ const skill = [
     title: "Typescript",
     link: "https://www.typescriptlang.org/",
   },
-  {
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
-    title: "Mongo DB",
-    link: "https://www.mongodb.com/",
-  },
-  {
-    icon: "https://www.pixelbird.com.au/wp-content/uploads/2020/02/nodejs-image.png",
-    title: "Node.js",
-    link: "https://nodejs.org/en",
-  },
-  {
-    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7S33Oq2FeRbyBBA6l1q8PwLVa3SzaONO-9Q&usqp=CAU",
-    title: "Express",
-    link: "https://expressjs.com/",
-  },
+  // {
+  //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
+  //   title: "Mongo DB",
+  //   link: "https://www.mongodb.com/",
+  // },
+  // {
+  //   icon: "https://www.pixelbird.com.au/wp-content/uploads/2020/02/nodejs-image.png",
+  //   title: "Node.js",
+  //   link: "https://nodejs.org/en",
+  // },
+  // {
+  //   icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7S33Oq2FeRbyBBA6l1q8PwLVa3SzaONO-9Q&usqp=CAU",
+  //   title: "Express",
+  //   link: "https://expressjs.com/",
+  // },
   {
     icon: "https://dgdeepon.github.io/static/media/chakra-ui_title2-400x400-removebg-preview.fc0f93596462cd01a157.png",
     title: "Chakra UI",
@@ -59,11 +59,11 @@ const skill = [
     title: "Git",
     link: "https://git-scm.com/",
   },
-  {
-    icon: "https://static-00.iconduck.com/assets.00/next-js-icon-144x144-oytn4vne.png",
-    title: "Next js",
-    link: "https://nextjs.org/learn/foundations/about-nextjs/what-is-nextjs",
-  },
+  // {
+  //   icon: "https://static-00.iconduck.com/assets.00/next-js-icon-144x144-oytn4vne.png",
+  //   title: "Next js",
+  //   link: "https://nextjs.org/learn/foundations/about-nextjs/what-is-nextjs",
+  // },
   {
     icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
     title: "Tailwind CSS",
@@ -72,7 +72,7 @@ const skill = [
 ];
 export default function Skill() {
   return (
-    <Fade direction="left">
+    <Fade >
       <Box
         id="skills"
         // border={"4px solid white"}
