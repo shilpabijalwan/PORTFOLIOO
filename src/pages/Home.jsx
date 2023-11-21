@@ -9,7 +9,7 @@ import Skill from "./Skill";
 import About from "./About";
 import Project from "./Project";
 import Contact from "./Contact";
-import Resume from "./Resume";
+import { DrawerColor } from "../components/DrawerColor";
 
 export default function Home() {
   return (
@@ -18,6 +18,10 @@ export default function Home() {
       pt={[10, 20, 30, 40]}
       // pb={40}
     >
+      {/* <DrawerColor />
+      <br />
+      <br /> */}
+
       <Information />
 
       <About />

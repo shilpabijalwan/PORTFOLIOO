@@ -39,7 +39,7 @@ export default function About() {
             justifyContent={"space-around"}
             flex={["", "", 2, 3]}
           >
-            <Fade direction="top">
+            {/* <Fade direction="top"> */}
               <Text
                 letterSpacing={{ base: 0.5, md: 2, lg: 2 }}
                 textAlign={"justify"}
@@ -57,7 +57,7 @@ export default function About() {
                 a proactive mindset. Excited to embark on this journey and make
                 a meaningful impact as a programmer.
               </Text>
-            </Fade>
+            {/* </Fade> */}
           </Box>
           <Box
             flex={1}

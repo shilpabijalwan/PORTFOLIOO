@@ -18,8 +18,7 @@ export default function Socials() {
       position={"fixed"}
       bottom={7}
       left={6}
-      visibility={["hidden", "hidden", "visible"]}
-    >
+      visibility={["visible", "visible", "visible"]}>
       {socials.map((s) => {
         return (
           <Box
@@ -28,13 +27,8 @@ export default function Socials() {
             key={Math.random()}
             _hover={{
               transform: "rotate(360deg) scaleY(1.1)",
-            }}
-          >
-            <Link
-              href={s.link}
-              target="_blank"
-              key={Math.random()}
-            >
+            }}>
+            <Link href={s.link} target="_blank" key={Math.random()}>
               <Image src={s.logo} />
             </Link>
           </Box>

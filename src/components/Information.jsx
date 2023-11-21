@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 
 export default function Information() {
   return (
-    <Fade direction="left">
+    <Fade direction="top">
       <Box
         // border={"1px solid blue"}
         p={10}
