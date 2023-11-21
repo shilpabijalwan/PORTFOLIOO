@@ -31,7 +31,7 @@ export default function Project() {
     },
   ];
   return (
-    <Box id="project" border={"1px solid blue"} py={"150px"}>
+    <Box id="project" py={"150px"}>
       <Text
         color={"#C69DD2"}
         fontSize={{ base: 25, md: 35, lg: 56 }}
