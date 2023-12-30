@@ -29,26 +29,26 @@ const skill = [
     title: "Redux",
     link: "https://redux.js.org/",
   },
+  // {
+  //   icon: "https://cdn-icons-png.flaticon.com/512/919/919832.png",
+  //   title: "Typescript",
+  //   link: "https://www.typescriptlang.org/",
+  // },
   {
-    icon: "https://cdn-icons-png.flaticon.com/512/919/919832.png",
-    title: "Typescript",
-    link: "https://www.typescriptlang.org/",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
+    title: "Mongo DB",
+    link: "https://www.mongodb.com/",
   },
-  // {
-  //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
-  //   title: "Mongo DB",
-  //   link: "https://www.mongodb.com/",
-  // },
-  // {
-  //   icon: "https://www.pixelbird.com.au/wp-content/uploads/2020/02/nodejs-image.png",
-  //   title: "Node.js",
-  //   link: "https://nodejs.org/en",
-  // },
-  // {
-  //   icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7S33Oq2FeRbyBBA6l1q8PwLVa3SzaONO-9Q&usqp=CAU",
-  //   title: "Express",
-  //   link: "https://expressjs.com/",
-  // },
+  {
+    icon: "https://www.pixelbird.com.au/wp-content/uploads/2020/02/nodejs-image.png",
+    title: "Node.js",
+    link: "https://nodejs.org/en",
+  },
+  {
+    icon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7S33Oq2FeRbyBBA6l1q8PwLVa3SzaONO-9Q&usqp=CAU",
+    title: "Express",
+    link: "https://expressjs.com/",
+  },
   {
     icon: "https://dgdeepon.github.io/static/media/chakra-ui_title2-400x400-removebg-preview.fc0f93596462cd01a157.png",
     title: "Chakra UI",
@@ -72,12 +72,11 @@ const skill = [
 ];
 export default function Skill() {
   return (
-    <Fade >
+    <Fade>
       <Box
         id="skills"
         // border={"4px solid white"}
-        py={"150px"}
-      >
+        py={"150px"}>
         <Text
           color={"#C69DD2"}
           fontSize={{ base: 25, md: 35, lg: 56 }}
@@ -99,8 +98,7 @@ export default function Skill() {
             "repeat(5,1fr)",
           ]}
           gap={4}
-          margin={"auto"}
-        >
+          margin={"auto"}>
           {skill.map(({ icon, title, link }) => {
             return (
               <GridItem
@@ -108,12 +106,8 @@ export default function Skill() {
                 overflow="hidden"
                 style={{
                   boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
-                }}
-              >
-                <Link
-                  href={link}
-                  target="_blank"
-                >
+                }}>
+                <Link href={link} target="_blank">
                   <Image
                     className="skills-card-img"
                     src={icon}
@@ -129,8 +123,7 @@ export default function Skill() {
                   className="skills-card-name"
                   textAlign={"center"}
                   fontSize={["15px", "20px", "20px", "25px"]}
-                  color={"#C69DD2"}
-                >
+                  color={"#C69DD2"}>
                   {title}
                 </Text>
               </GridItem>

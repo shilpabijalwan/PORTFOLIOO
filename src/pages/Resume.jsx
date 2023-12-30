@@ -6,7 +6,7 @@ export default function Resume() {
     <Box>
       <Button
         className="nav-link resume"
-        borderRadius={0}
+        // borderRadius={0}
         onClick={() => {
           window.open(
             "https://drive.google.com/file/d/1F-chHUIyXD5TjjS0jFB53nE0-DS4NlqU/view?usp=share_link",

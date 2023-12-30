@@ -9,7 +9,7 @@ export default function Project() {
       discription:
         "Purplle.com is an online store that sells cosmetics, fragrances, skin, and hair care products.It was founded in 2011 and is headquartered in Mumbai, Maharashtra. Purplle has over 1,000 brands, 60,000 products, and 7 million monthly active users. The company uses a mix of organic and paid marketing techniques to reach its target audience",
 
-      Techstack: "HTML,CSS,React,ChakraUi,Redux",
+      Techstack: "HTML , CSS , React , Redux , ChakraUi",
       repo: "Git Repo",
       LiveSite: "Live Site",
       img: "https://miro.medium.com/v2/resize:fit:1200/1*MVJ9c0M3O6XgtXixCeATZQ.png",
@@ -22,7 +22,7 @@ export default function Project() {
       discription:
         "AutoZone is the nation's leading retailer and a leading distributor of automotive replacement parts and accessories with more than 7,000 stores in the US, Mexico, Brazil and Puerto Rico. Each store carries an extensive line for cars, sport utility vehicles, vans and light trucks, including new and remanufactured hard parts, maintenance items and accessories.",
 
-      Techstack: "HTML,CSS,JavaScript...",
+      Techstack: "HTML , CSS , JavaScript...",
       repo: "Git Repo",
       LiveSite: "Live Site",
       img: "https://www.retailtouchpoints.com/wp-content/uploads/2021/11/AutoZone-960x514.png",
