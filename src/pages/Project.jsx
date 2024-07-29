@@ -5,29 +5,27 @@ import { Link } from "react-router-dom";
 export default function Project() {
   const allProjects = [
     {
-      name: "Purplle",
+      name: "EAT FROM YOUR SEAT",
       discription:
-        "Purplle.com is an online store that sells cosmetics, fragrances, skin, and hair care products.It was founded in 2011 and is headquartered in Mumbai, Maharashtra. Purplle has over 1,000 brands, 60,000 products, and 7 million monthly active users. The company uses a mix of organic and paid marketing techniques to reach its target audience",
+        "Eat From Your Seat App Suite is based on series of connected apps, that are specifically designed and developed for stadiums.Designed specifically for stadiums, the Eat From Your Seat platform solution enables stadium operators to elevate the Fans’ experience and efficiently capture additional food and beverage revenue without disruption to existing concession sales.",
 
-      Techstack: "HTML , CSS , React , Redux , ChakraUi",
-      repo: "Git Repo",
+      Techstack: "HTML , CSS , VUE JS , VUEX , NUXT JS",
+      img: "Screenshot 2024-07-29 213901.png",
       LiveSite: "Live Site",
-      img: "https://miro.medium.com/v2/resize:fit:1200/1*MVJ9c0M3O6XgtXixCeATZQ.png",
-      livelink: "https://purple-clone-4uck.vercel.app/",
-      gitlink:
-        "https://github.com/shilpabijalwan/purpleClone/tree/main/purple-clone",
+      livelink: "https://www.eatfromyourseat.com/",
+
     },
     {
-      name: "AutoZone",
+      name: "PRODIGY FOOTBALL",
       discription:
-        "AutoZone is the nation's leading retailer and a leading distributor of automotive replacement parts and accessories with more than 7,000 stores in the US, Mexico, Brazil and Puerto Rico. Each store carries an extensive line for cars, sport utility vehicles, vans and light trucks, including new and remanufactured hard parts, maintenance items and accessories.",
+        "Prodigy Football has designed the Elite Development Program with the purpose of enhancing the overall standards of grassroots and community level coaching.",
 
-      Techstack: "HTML , CSS , JavaScript...",
-      repo: "Git Repo",
+      Techstack: "HTML , JAVASCRIPT ,REACT , TAILWIND CSS ,REDUX TOOLKIT ",
+      // repo: "Git Repo",
       LiveSite: "Live Site",
-      img: "https://www.retailtouchpoints.com/wp-content/uploads/2021/11/AutoZone-960x514.png",
-      livelink: "https://darling-yeot-95e7b2.netlify.app/",
-      gitlink: "https://github.com/bharat24862486/prized-beef-1928?search=1",
+      img: "Screenshot 2024-07-29 215656.png",
+      livelink: "https://program.prodigyfootball.com.au/",
+     
     },
   ];
   return (
@@ -76,7 +74,7 @@ export default function Project() {
             </Text>
 
             <Stack direction={"row"} justifyContent={"space-around"}>
-              <Link to={ele.gitlink}>
+              {/* <Link to={ele.gitlink}>
                 <Button
                   colorScheme="red"
                   textColor="#A29C9B"
@@ -84,7 +82,7 @@ export default function Project() {
                   _hover={{ bg: "#C69DD2", textColor: "black" }}>
                   {ele.repo}
                 </Button>
-              </Link>
+              </Link> */}
               <Link to={ele.livelink}>
                 <Button
                   colorScheme="red"

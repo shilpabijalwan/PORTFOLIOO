@@ -29,11 +29,12 @@ const skill = [
     title: "Redux",
     link: "https://redux.js.org/",
   },
-  // {
-  //   icon: "https://cdn-icons-png.flaticon.com/512/919/919832.png",
-  //   title: "Typescript",
-  //   link: "https://www.typescriptlang.org/",
-  // },
+  {
+    icon: "https://w7.pngwing.com/pngs/70/60/png-transparent-vue-js-javascript-library-github-github-angle-text-triangle-thumbnail.png",
+    title: "Vue js",
+    link: "https://nextjs.org/learn/foundations/about-nextjs/what-is-nextjs",
+  },
+  
   {
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain.svg",
     title: "Mongo DB",
@@ -59,11 +60,7 @@ const skill = [
     title: "Git",
     link: "https://git-scm.com/",
   },
-  // {
-  //   icon: "https://static-00.iconduck.com/assets.00/next-js-icon-144x144-oytn4vne.png",
-  //   title: "Next js",
-  //   link: "https://nextjs.org/learn/foundations/about-nextjs/what-is-nextjs",
-  // },
+ 
   {
     icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
     title: "Tailwind CSS",
