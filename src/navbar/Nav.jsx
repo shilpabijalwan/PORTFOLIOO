@@ -7,10 +7,12 @@ import {
   useDisclosure,
   Stack,
   Text,
+  Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import Resume from "../pages/Resume";
-// import { useColorMode } from "@chakra-ui/react";
+import React, { useState, useEffect } from "react";
+import "../App.css";
 
 const Links = [
   { title: "Home", link: "#" },
@@ -22,14 +24,14 @@ const Links = [
 
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [activeHash, setActiveHash] = useState(window.location.hash || "#");
 
-  // const breakpoints = {
-  //   sm: "320px",
-  //   md: "768px",
-  //   lg: "960px",
-  //   xl: "1200px",
-  //   "2xl": "1536px",
-  // };
+  useEffect(() => {
+    const onHashChange = () => setActiveHash(window.location.hash || "#");
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, []);
+
   return (
     <>
       <Box
@@ -38,51 +40,20 @@ export default function Simple() {
         py={{ base: "2", md: "10", lg: "5" }}
         position={"fixed"}
         zIndex={1}
-        // background={"#1A202C"}
         mb={30}
       >
-        <Flex
-          h={16}
-          alignItems={"center"}
-          justifyContent={"space-between"}
-          // background={"#1A202C"}
-        >
-          <Box
-            display={"flex"}
-            // background={"#1A202C"}
-          >
-            <Text
-              color="#FFD3FF"
-              fontSize={25}
-              fontWeight={"bold"}
-            >
-              S
-            </Text>
-            <Text
-              color={"#A29C9B"}
-              fontSize={25}
-              fontWeight={"bold"}
-            >
-              hilpaBijalwan
-            </Text>
-          </Box>
+        <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
+          <Box className="inverted-radius">SB</Box>
 
           <Box display={"flex"}>
             <IconButton
-              // background={"pink"}
               variant="ghost"
               size={"lg"}
               icon={
                 isOpen ? (
-                  <CloseIcon
-                    color="#A29C9B"
-                    boxSize={6}
-                  />
+                  <CloseIcon color="#A29C9B" boxSize={6} />
                 ) : (
-                  <HamburgerIcon
-                    color="#A29C9B"
-                    boxSize={8}
-                  />
+                  <HamburgerIcon color="#A29C9B" boxSize={8} />
                 )
               }
               aria-label={"Open Menu"}
@@ -91,10 +62,7 @@ export default function Simple() {
               _hover={"none"}
             />
 
-            <HStack
-              spacing={3}
-              alignItems={"center"}
-            >
+            <HStack spacing={3} alignItems={"center"}>
               <HStack
                 as={"nav"}
                 spacing={15}
@@ -104,11 +72,15 @@ export default function Simple() {
                   <Link
                     _hover={{ textDecoration: "none" }}
                     href={link.link}
-                    key={link}
+                    key={link.link}
                     // onClick={()=>onClose()}
                   >
                     <Text
-                      color={"#C69DD2"}
+                      color={
+                        activeHash === link.link
+                          ? "#FFD3FF" // Highlight color
+                          : "#C69DD2"
+                      }
                       fontSize={18}
                       fontWeight={"bold"}
                     >
@@ -116,7 +88,14 @@ export default function Simple() {
                     </Text>
                   </Link>
                 ))}
-                <Resume />
+               
+                <Image
+                  src="/pic.jpg"
+                  alt="IMG"
+                  h={"50px"}
+                  w={"50px"}
+                  borderRadius={"full"}
+                />
               </HStack>
             </HStack>
           </Box>
@@ -129,21 +108,24 @@ export default function Simple() {
             // border={"1px solid blue"}
             h={"100vh"}
           >
-            <Stack
-              as={"nav"}
-              spacing={20}
-            >
-              <Resume />
+            <Stack as={"nav"} spacing={20}>
+              <Image
+                src="/pic.jpg"
+                alt="IMG"
+                h={"50px"}
+                w={"50px"}
+                borderRadius={"full"}
+              />
 
               {Links.map((link) => (
                 <Link
                   href={link.link}
-                  key={link}
+                  key={link.link}
                   color={"pink.200"}
                   onClick={onClose}
                 >
                   <Text
-                    // color={"#C69DD2"}
+                    color={activeHash === link.link ? "#FFD3FF" : "#C69DD2"}
                     fontSize={18}
                     fontWeight={"bold"}
                   >
@@ -151,11 +133,9 @@ export default function Simple() {
                   </Text>
                 </Link>
               ))}
-             
             </Stack>
           </Box>
         ) : null}
-       
       </Box>
     </>
   );

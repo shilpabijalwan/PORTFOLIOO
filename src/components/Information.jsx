@@ -3,14 +3,16 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 
 import Typewriter from "typewriter-effect";
+import { SUMMERY } from "../pages/constants";
 
 export default function Information() {
   return (
     <Fade direction="top">
       <Box
         // border={"1px solid blue"}
-        p={10}
-        pb={20}
+        w={{ base: "100%", md: "100%", lg: "100%" }}
+        px={{ base: "5", md: "10", lg: "20" }}
+        py={{ base: "2", md: "10", lg: "5" }}
       >
         <Center display={"flex"}>
           <Text
@@ -53,11 +55,11 @@ export default function Information() {
             onInit={(typewriter) => {
               typewriter
 
-                .typeString("A Full Stack Web Developer")
+                .typeString("A Front-end Developer")
 
                 .pauseFor(1000)
                 .deleteAll()
-                .typeString("A MERN Stack Web Developer")
+                .typeString("A Web Developer")
                 .start()
                 .pauseFor(1000)
                 .deleteAll()
@@ -66,7 +68,9 @@ export default function Information() {
             }}
           />
         </Text>
-        <Box
+        <Box 
+        px={{ base: "5", md: "10", lg: "20" }}
+        // py={{ base: "2", md: "10", lg: "5" }}
           // border={"1px solid green"}
           w="100%"
           textAlign={"justify"}
@@ -78,10 +82,7 @@ export default function Information() {
         >
           <Fade direction="down">
             <Text letterSpacing={{ base: 0.5, md: 2, lg: 2 }}>
-              An enthusiastic and driven developer ready to contribute expertise
-              to exciting projects. With a thirst for knowledge and a commitment
-              to excellence,poised to embark on a successful career and drive
-              positive change through programming abilities.
+              {SUMMERY}
             </Text>
           </Fade>
         </Box>

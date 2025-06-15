@@ -27,6 +27,18 @@
 .App-link {
   color: #61dafb;
 }
+.inverted-radius {
+  border-radius: 50px;
+  background-color: #1A202C;
+  padding: 10px;
+  color: #FFD3FF;
+  font-weight: bold;
+  font-size: 25px;
+  height: 70px;
+  width: 70px;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 @keyframes App-logo-spin {
   from {
