@@ -5,6 +5,7 @@ const experiences = [
     company: "Omniful",
     role: "Software Engineer",
     duration: "Oct 2024 – Present",
+    location:"Gurgoan, haryana",
     description:
       "Built internal tools and customer-facing dashboards using Next.js and Chakra UI. Optimized performance and collaborated with cross-functional teams.",
   },
@@ -12,6 +13,7 @@ const experiences = [
     company: "Evomorf",
     role: "Frontend Developer",
     duration: "June 2023 – Oct 2024",
+    location:"Mohali, Punjab",
     description:
       "Worked on building reusable React components and implemented REST API integration for a CRM application.",
   },
@@ -20,19 +22,20 @@ const experiences = [
 export default function WorkExperience() {
   return (
     <Box
-      py={10}
-             px={{ base: "5", md: "10", lg: "20" }}
+      id="experience"
+      px={{ base: "5", md: "10", lg: "20" }}
       rounded="xl"
-     w={'100%'}
-    //   mx="auto"
+      w={"100%"}
+       py={"150px"}
+      //   mx="auto"
     >
       <Heading
         size="lg"
         mb={10}
         textAlign="center"
         color={"#C69DD2"}
-          fontSize={{ base: 25, md: 35, lg: 56 }}
-          fontWeight={"bold"}
+        fontSize={{ base: 25, md: 35, lg: 56 }}
+        fontWeight={"bold"}
         letterSpacing="wide"
       >
         Work Experience
@@ -67,7 +70,10 @@ export default function WorkExperience() {
                 w="100%"
                 borderLeft="5px solid #E9D8FD"
                 transition="box-shadow 0.2s, transform 0.2s"
-                _hover={{ boxShadow: "xl", transform: "translateY(-3px) scale(1.01)" }}
+                _hover={{
+                  boxShadow: "xl",
+                  transform: "translateY(-3px) scale(1.01)",
+                }}
               >
                 <Flex
                   justify="space-between"
@@ -80,11 +86,12 @@ export default function WorkExperience() {
                     </Heading>
                     <Text
                       fontSize="sm"
-                      color="purple.500"
+                      color="#A29C9B"
                       fontWeight="semibold"
-                       align='start'
+                      align="start"
+                       fontFamily={"Segoe Print"}
                     >
-                      {exp.company}
+                      {exp.company} - {exp.location}
                     </Text>
                   </Box>
                   <Text fontSize="sm" color="gray.500" mt={{ base: 2, md: 0 }}>

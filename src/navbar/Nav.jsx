@@ -10,13 +10,12 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import Resume from "../pages/Resume";
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import "../App.css";
 
 const Links = [
   { title: "Home", link: "#" },
-  { title: "About", link: "#about" },
+  { title: "Experience", link: "#experience" },
   { title: "Skills", link: "#skills" },
   { title: "Projects", link: "#project" },
   { title: "Contact", link: "#contact" },
@@ -39,7 +38,7 @@ export default function Simple() {
         px={{ base: "5", md: "10", lg: "20" }}
         py={{ base: "2", md: "10", lg: "5" }}
         position={"fixed"}
-        zIndex={1}
+        zIndex={10}
         mb={30}
       >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
@@ -62,10 +61,10 @@ export default function Simple() {
               _hover={"none"}
             />
 
-            <HStack spacing={3} alignItems={"center"}>
+            <HStack spacing={6} alignItems={"center"}>
               <HStack
                 as={"nav"}
-                spacing={15}
+                spacing={16}
                 display={{ base: "none", md: "flex" }}
               >
                 {Links.map((link) => (
@@ -76,6 +75,7 @@ export default function Simple() {
                     // onClick={()=>onClose()}
                   >
                     <Text
+                    opacity={activeHash === link.link ? 1 : 0.7}
                       color={
                         activeHash === link.link
                           ? "#FFD3FF" // Highlight color
@@ -89,16 +89,18 @@ export default function Simple() {
                   </Link>
                 ))}
                
-                <Image
-                  src="/pic.jpg"
-                  alt="IMG"
-                  h={"50px"}
-                  w={"50px"}
-                  borderRadius={"full"}
-                />
               </HStack>
-            </HStack>
+              </HStack>
+              
           </Box>
+           <Image
+                src="/pic.jpg"
+                alt="IMG"
+                h={"50px"}
+                w={"50px"}
+                borderRadius={"full"}
+              />
+           
         </Flex>
 
         {isOpen ? (

@@ -33,23 +33,25 @@ export default function Skill() {
             "repeat(2,1fr)",
             "repeat(3,1fr)",
             "repeat(4,1fr)",
-            "repeat(5,1fr)",
+            "repeat(4,1fr)",
           ]}
           gap={4}
-          margin={"auto"}>
+          // margin={"auto"}
+          >
           {SKILLS_DATA.map(({ icon, title, link }) => {
             return (
               <GridItem
-                padding={"35px"}
-                overflow="hidden"
-                style={{
+              py={16}
+               overflow="hidden" style={{
                   boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
                 }}>
+
                 <Link href={link} target="_blank">
                   <Image
                     className="skills-card-img"
                     src={icon}
-                    w="100%"
+                    w="30%"
+                    margin={"auto"}
                     transition="all .1s ease-in-out"
                     _hover={{
                       transform: "scale(1.1)",
@@ -60,7 +62,7 @@ export default function Skill() {
                 <Text
                   className="skills-card-name"
                   textAlign={"center"}
-                  fontSize={["15px", "20px", "20px", "25px"]}
+                  fontSize={["15px", "20px", "20px", "22px"]}
                   color={"#C69DD2"}>
                   {title}
                 </Text>

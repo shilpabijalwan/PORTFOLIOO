@@ -3,7 +3,8 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 
 import Typewriter from "typewriter-effect";
-import { SUMMERY } from "../pages/constants";
+import { ABOUT_ME } from "../pages/constants";
+import  Resume  from "../pages/Resume";
 
 export default function Information() {
   return (
@@ -82,10 +83,12 @@ export default function Information() {
         >
           <Fade direction="down">
             <Text letterSpacing={{ base: 0.5, md: 2, lg: 2 }}>
-              {SUMMERY}
+              {ABOUT_ME}
             </Text>
+          
           </Fade>
         </Box>
+          <Resume />
       </Box>
     </Fade>
   );
