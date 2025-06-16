@@ -111,13 +111,7 @@ export default function Simple() {
             h={"100vh"}
           >
             <Stack as={"nav"} spacing={20}>
-              <Image
-                src="/pic.jpg"
-                alt="IMG"
-                h={"50px"}
-                w={"50px"}
-                borderRadius={"full"}
-              />
+            
 
               {Links.map((link) => (
                 <Link
