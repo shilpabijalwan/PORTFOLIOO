@@ -26,8 +26,7 @@ export default function WorkExperience() {
       px={{ base: "5", md: "10", lg: "20" }}
       rounded="xl"
       w={"100%"}
-      py={"150px"}
-      //   mx="auto"
+      py={{base:"50px", md: "150px" }}
     >
       <Heading
         size="lg"
