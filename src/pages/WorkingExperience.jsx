@@ -26,7 +26,7 @@ export default function WorkExperience() {
       px={{ base: "5", md: "10", lg: "20" }}
       rounded="xl"
       w={"100%"}
-       py={"150px"}
+      py={"150px"}
       //   mx="auto"
     >
       <Heading
@@ -50,19 +50,12 @@ export default function WorkExperience() {
           height="100%"
           bgGradient="linear(to-b, #C69DD2, #38B2AC)"
           borderRadius="full"
-          zIndex={0}
+         
         />
         <VStack spacing={12} align="stretch" position="relative" zIndex={1}>
           {experiences.map((exp, idx) => (
             <Flex key={idx} align="flex-start" position="relative">
               {/* Timeline dot with gradient */}
-              <Circle
-                size="20px"
-                bgGradient="linear(to-br, #C69DD2, #38B2AC)"
-                mt={1}
-                mr={6}
-                zIndex={2}
-              />
               <Box
                 p={6}
                 borderRadius="xl"

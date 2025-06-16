@@ -18,6 +18,7 @@ export default function Socials() {
       position={"fixed"}
       bottom={7}
       left={6}
+      zIndex={6}
       visibility={["visible", "visible", "visible"]}>
       {socials.map((s) => {
         return (
