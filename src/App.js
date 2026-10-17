@@ -1,23 +1,33 @@
-import "./App.css";
+import { MotionConfig } from "framer-motion";
+import Cursor from "./components/Cursor";
+import Nav from "./components/Nav";
+import Hero from "./components/Hero";
+import Marquee from "./components/Marquee";
+import About from "./components/About";
+import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Work from "./components/Work";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-import Simple from "./navbar/Nav";
-import AnimatedCursor from "react-animated-cursor";
-import Home from "./pages/Home";
-
-import Socials from "./components/Social";
-import { DrawerColor } from "./components/DrawerColor";
-function App() {
+export default function App() {
   return (
-    <>
-      <div className="App">
-        <AnimatedCursor hasBlendMode={true} innerSize={12} outerSize={6} />
-        <Simple />
-       
-        <Home />
-        <Socials />
-      </div>
-    </>
+    <MotionConfig reducedMotion="user">
+      <a className="skip-link" href="#about">
+        Skip to content
+      </a>
+      <Cursor />
+      <Nav />
+      <main>
+        <Hero />
+        <Marquee />
+        <About />
+        <Experience />
+        <Skills />
+        <Work />
+        <Contact />
+      </main>
+      <Footer />
+    </MotionConfig>
   );
 }
-
-export default App;

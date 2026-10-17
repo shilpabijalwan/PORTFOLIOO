@@ -1,8 +1,12 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders every section of the portfolio", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole("heading", { level: 1, name: "Shilpa Bijalwan" })).toBeInTheDocument();
+  for (const id of ["about", "experience", "skills", "work", "contact"]) {
+    expect(document.getElementById(id)).toBeInTheDocument();
+  }
+  expect(screen.getByText("Warehouse Management System")).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /send message/i })).toBeInTheDocument();
 });
